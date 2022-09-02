@@ -1,4 +1,4 @@
-# Excel Iterator
+# Mathcad Excel Tool
 This Excel template provides some basic automation tools for Mathcad Prime, and does not require any additional programming or installation from the user.
 
 ![Overview](img/mathcad_iterator_overview.png)
