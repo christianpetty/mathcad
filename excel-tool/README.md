@@ -73,13 +73,6 @@ This tutorial walks you through an example Mathcad worksheet bundled with the re
 9. Click **Iterate** to begin the loop. Outputs should begin appearing in `OutputsTable`.
    ![Done](img/mathcad_iterator_done.png)
  
-## Releases
-### v0.1 (2022-04-14)
-[Download v0.1](https://mathcad.rad.cm/excel-iterator/met-v0.1.zip)
-#### Release Notes
-
-Initial release. 
-
 ### Feature Pipeline
 - [ ] Automatically build tables based on pre-defined Mathcad inputs and outputs
 - [x] Clear outputs button
