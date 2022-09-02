@@ -26,14 +26,14 @@ The API supports JavaScript, C++, C#, VB, VB Script, VBA, and any other language
 ### Library
 The type library file `Ptc.MathcadPrime.Automation.tlb` lives in the root directory of your Mathcad installation. It can be opened and explored inside [Visual Studio]([https://visualstudio.microsoft.com](https://visualstudio.microsoft.com/)) using the **Object Browser** to see which methods and classes exist and how to use them. I do not believe that VS Code has the ability to open this library out of the box, but please reach out if I am wrong. 
 
-> [!INFO] Visual Studio setup
-> The *.NET desktop development* workload must be installed with Visual Studio. Open Visual Studio Installer, and modify your installation of Visual Studio. Under *workloads*, enable **.NET desktop development**.
+#### Visual Studio setup
+The *.NET desktop development* workload must be installed with Visual Studio. Open Visual Studio Installer, and modify your installation of Visual Studio. Under *workloads*, enable **.NET desktop development**.
 
 ### Designate inputs and outputs
 Variables must be flagged as either an input or an output if you want it to be exposed to the API. Part of this process is also specifying an alias for that variable that is machine readable (Greek characters and underscores are supported). See [To Designate Input and Output Regions (ptc.com)](https://support.ptc.com/help/mathcad/r7.0/en/index.html#page/PTC_Mathcad_Help%2Fto_designate_input_and_output_regions.html%23) for help on managing I/O in a Mathcad worksheet.
 
-> [!WARNING] Unique variable names are not enforced by Mathcad
-> Mathcad does not check for unique values across inputs and outputs. This could be problematic depending on how you interact with the worksheet. I highly recommend using unique names for all I/O aliases.
+#### Unique variable names are not enforced by Mathcad
+Mathcad does not check for unique values across inputs and outputs. This could be problematic depending on how you interact with the worksheet. I highly recommend using unique names for all I/O aliases.
 
 ### Units
 Units shall be in string format. Use asterisks `*` and forward-slashes `/` for chaining units. The units are not well-documented, but are believed to follow the same input notation at Mathcad e.g. pound-force as `lbf`.

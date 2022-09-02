@@ -3,25 +3,25 @@ This Excel template provides some basic automation tools for Mathcad Prime, and 
 
 ![Overview](img/mathcad_iterator_overview.png)
 
-### Features
+## Features
 - Select a single Mathcad worksheet using a file selector dialog.
 - Automatically read inputs, outputs, and default units for a Mathcad worksheet.
 - Loop through as many iterations, inputs, and outputs as are supported by Mathcad.
 - Override input and outputs units.
 - Mathcad Worksheets are never saved. Future releases may allow for you to save the Mathcad worksheet with a specified iteration.
 
-### Limitations
+## Limitations
  - Ensure correct spelling of variable aliases.
  - Ensure correct Mathcad units syntax
  - Do **not** duplicate tables or tabs. The entire Excel document should be duplicated at the file level. This will change in future releases.
  - Do **not** rename tables. However, because tables are used, the template is less sensitive to format changes. For example, you can move a table and it will still work so long as the table name is hasn't changed.
  - It is recommended that you **close** Mathcad and all open worksheets prior to running scripts in this tool.
 
-### Requirements
+## Requirements
 - Mathcad Prime 3.1 or later installed
 - Excel
 
-### Quick start
+## Quick start
 1. Setup the Mathcad worksheet of interest per [[mathcad#Designate inputs and outputs]]. The file `Example Worksheet.mcdx` bundled with the release shows what an alias list might look like.
 2. Open the template.
 3. Click **Select Mathcad Worksheet** and browse for the file.
@@ -31,15 +31,15 @@ This Excel template provides some basic automation tools for Mathcad Prime, and 
 7. Add input values in `InputsTable` for each alias and iteration.
 8. Click **Iterate** to begin iterating. Outputs will populate the `OutputsTable`. This operation could take a while.
 
-### Interface
-#### Buttons
+## Interface
+### Buttons
 - **Select Mathcad Worksheet** - Opens a file dialog to select the location of the Mathcad worksheet. Network drives are allowable, but may not be as fast as local.
 - **Read Mathcad Worksheet** - Reads the selected worksheet file for inputs and outputs, then populates the inputs and outputs table with default units and initial values.
 - **Iterate** - Runs all iterations in the iteration table.
 - **Clear Outputs** - Clears the values in the outputs columns in the iteration table.
 - **Reset** - Clears all tables and the Mathcad worksheet path.
 
-#### Tables
+### Tables
 All tables in this template are true structured tables. I highly recommend using right-click operations on tables in order to change their size.
 - `MCInputsTable`/`MCOutputsTable` - Show the inputs and outputs defined in the Mathcad worksheet after running `Read Mathcad Worksheet`. Allows for some granular control.
 	- `Alias` - Name of variable define in Mathcad.
@@ -54,7 +54,7 @@ All tables in this template are true structured tables. I highly recommend using
 - `InputsTable` - Where input data is stored for each iteration. You may include more columns than there are inputs/outputs designated in the Mathcad worksheet, since the `MCInputsTable` and `MCOutputsTable` control which are enabled.
 
 
-### Tutorial
+## Tutorial
 This tutorial walks you through an example Mathcad worksheet bundled with the release download. Begin by opening the downloaded Excel file.
 
 1. Open `Mathcad Iterator.xlsm`.
@@ -73,12 +73,12 @@ This tutorial walks you through an example Mathcad worksheet bundled with the re
 9. Click **Iterate** to begin the loop. Outputs should begin appearing in `OutputsTable`.
    ![Done](img/mathcad_iterator_done.png)
  
-### Releases
-#### v0.1 
-[Download v0.1](https://cdn.radianrad.com/Mathcad-Excel-Tool-v0.1.zip)
-> [!INFO]- Release Notes
-> **2022-04-14**
-> Initial release. 
+## Releases
+### v0.1 (2022-04-14)
+[Download v0.1](https://mathcad.rad.cm/excel-iterator/met-v0.1.zip)
+#### Release Notes
+
+Initial release. 
 
 ### Feature Pipeline
 - [ ] Automatically build tables based on pre-defined Mathcad inputs and outputs
